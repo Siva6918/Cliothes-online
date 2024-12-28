@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Cloth Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Online Cloth Store</h1>
+    <input type="text" id="search-bar" placeholder="Search for a brand...">
+    <button id="view-cart">View Cart</button>
+  </header>
+
+  <nav>
+    <button onclick="showHomePage()">Home</button>
+    <button onclick="filterProducts('all')">All Products</button>
+    <button onclick="filterProducts('mens')">Men's Clothing</button>
+    <button onclick="filterProducts('womens')">Women's Clothing</button>
+    <button onclick="filterProducts('kids')">Kids' Clothing</button>
+  </nav>
+
+  <main id="main-content">
+    <section id="home-page" style="display: block;">
+      <h2>Welcome to the Online Cloth Store</h2>
+      <p>Your one-stop shop for the latest fashion trends. Explore our wide range of clothing for men, women, and kids.</p>
+      <img src="https://1.bp.blogspot.com/-KS8kv95p9cE/XQxy8jrIcNI/AAAAAAAAdOE/q14G3H07Uc83j1bSJvguBPstvbygv2qYwCLcBGAs/s1600/click%2Band%2Bmortar.jpgg" alt="Store Image" width="100%">
+      <h3>About Us</h3>
+      <p>At Online Cloth Store, we offer a curated selection of high-quality clothing at affordable prices. Our mission is to make fashion accessible to everyone, no matter their style or budget. Whether you're looking for trendy outfits or timeless classics, we've got you covered!</p>
+    </section>
+
+    <section id="product-list" style="display: none;">
+      <!-- Products will be dynamically added here -->
+    </section>
+  </main>
+
+  <div id="cart-summary" style="display:none;">
+    <h2>Shopping Cart</h2>
+    <ul id="cart-items">
+      <!-- Cart items will be dynamically added here -->
+    </ul>
+    <p>Total: $<span id="total-price">0.00</span></p>
+    <button onclick="closeCart()">Close</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
